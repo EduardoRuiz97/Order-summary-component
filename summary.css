@@ -1,0 +1,169 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+:root {
+  --Paleblue: hsla(225, 100%, 94%, 0.377);
+  --Brightblue: hsl(245, 75%, 52%);
+  --VeryPaleBlue: hsl(225, 100%, 98%);
+  --DesaturatedBlue: hsl(224, 23%, 55%);
+  --DarkBlue: hsla(223, 47%, 23%, 0.199);
+}
+
+body{
+  text-align: 16px;
+  background-image: url("pattern-background-mobile.svg"), url("pattern-background-desktop.svg");
+}
+
+.mainContainer {
+  max-width: 80%;
+  margin: 20% auto;
+  border-radius: 20px;
+  display: grid;
+  grid-template-rows: 1fr max-content;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.illustration {
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.infoCardContainer {
+  padding: 15% 5% 10%;
+  text-align: center;
+}
+
+.textInfo h1 {
+  font-size: 1em;
+  font-weight: 900;
+}
+
+.textInfo p {
+  margin: 20px 0px;
+  color: var(--DesaturatedBlue);
+}
+
+.plan {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: var(--Paleblue);
+  border-radius: 10px;
+  font-size: 1em;
+}
+
+.typePlan {
+  font-weight: 900;
+}
+
+.price {
+  color: var(--DesaturatedBlue);
+}
+
+.plan a {
+  color: var(--Brightblue)
+}
+
+.plan a:hover {
+  color: rgba(98, 61, 233, 0.856);
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 1em;
+  margin: 1em 0px 0px;
+  text-align: center;
+}
+
+#a {
+  width: 90%;
+  height: 40px;
+  background-color: var(--Brightblue);
+  color: white;
+  font-weight: 700;
+  margin: auto;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 5px 25px var(--DarkBlue);
+  cursor: pointer;
+}
+
+#a:hover {
+  background-color: rgba(98, 61, 233, 0.856);
+}
+
+#b {
+  background-color: white;
+  border: none;
+  font-weight: 700;
+  color: var(--DesaturatedBlue);
+  cursor: pointer;
+}
+
+#b:hover{
+  color: black;
+}
+
+
+/*---footer---*/
+
+.attribution { 
+  font-size: 12px; 
+  text-align: center; 
+  align-self: flex-end;
+}
+.attribution a { 
+  color: black;
+  text-decoration: underline;
+}
+
+
+/*---- Media Queries ----*/
+
+@media only screen and (min-width: 500px) {
+  body {
+    background-image: url("MacBook\ Air\ -\ 1.png") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .mainContainer {
+    max-width: 60vw;
+    max-height: 75vh;
+    margin: 10% auto;
+  }
+  
+
+}
+
+@media only screen and (min-width: 777px) {
+
+  .mainContainer {
+    max-width: 40vw;
+    max-height: 80vh;
+    margin: 10% auto;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+
+  .mainContainer {
+    max-width: 30vw;
+    max-height: 80vh;
+    margin: 10vh auto;
+  }
+  
+
+}
